@@ -2,7 +2,7 @@
 
 For a detailed explanation of the code please visit the following blog posts:
 
-Front-api-interface-server:
+Front-api-interface-server: https://www.leightley.com/mean-stack-user-authentication-and-sms-validation-with-twilio-authy-part-1-2-developing-the-api/
 
 Login-app: to be released
 
