@@ -14,6 +14,18 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+//This ensures we can execute the app during simulation
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+    if (req.method === 'OPTIONS') {
+        res.end();
+    } else {
+        next();
+    }
+});
+
 // log to console (important for feedback)
 app.use(morgan('dev'));
 

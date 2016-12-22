@@ -1,0 +1,25 @@
+<ion-view title="Please sign in...">
+    <ion-content class="padding">
+
+        <div class="list">
+
+            <label class="item item-input">
+                <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" placeholder="Username" ng-model="user.username">
+            </label>
+
+            <label class="item item-input">
+                <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+                <input type="password" placeholder="Password" ng-model="user.password">
+            </label>
+
+        </div>
+
+        <button class="button button-full button-balanced" ng-click="login()">
+            Login
+        </button>
+
+        <button class="button button-positive button-clear button-full" ui-sref="outside.register">Register</button>
+
+    </ion-content>
+</ion-view>

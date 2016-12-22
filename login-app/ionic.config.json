@@ -1,0 +1,10 @@
+{
+  "name": "login-app",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/app_api",
+      "proxyUrl": "http://127.0.0.1:8080/app_api"
+    }
+  ]
+}

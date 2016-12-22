@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- Your Controllers -->
+    <script src="js/controllers/dashboard/dashboard.controller.js"></script>
+    <script src="js/controllers/login/login.controller.js"></script>
+    <script src="js/controllers/register/register.controller.js"></script>
+    <script src="js/controllers/authManager.controller.js"></script>
+
+    <!-- Your Services -->
+    <script src="js/services/AuthService.service.js"></script>
+    <script src="js/services/auth.constant.js"></script>
+
+  </head>
+  <body>
+
+    <ui-view></ui-view>
+
+        <script>
+            angular.element(document).ready(function() {
+                if (window.cordova) {
+                    console.log("Running in Cordova, will bootstrap AngularJS once 'deviceready' event fires.");
+                    document.addEventListener('deviceready', function() {
+                        console.log("Index.html: Deviceready event has fired, bootstrapping AngularJS.");
+                        angular.bootstrap(document.body, ['starter']);
+                    }, false);
+                } else {
+                    console.log("Index.html: Running in browser, bootstrapping AngularJS now.");
+                    angular.bootstrap(document.body, ['starter']);
+                }
+            });
+        </script>
+
+  </body>
+</html>
